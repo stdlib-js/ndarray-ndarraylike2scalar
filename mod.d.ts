@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,16 +16,20 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
-* Convert an ndarray-like object to a scalar value.
+* Converts an ndarray-like object to a scalar value.
 *
-* @module @stdlib/ndarray-ndarraylike2scalar
+* @param x - input ndarray
+* @returns scalar value
 *
 * @example
 * var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
-* var ndarraylike2scalar = require( '@stdlib/ndarray-ndarraylike2scalar' );
 *
 * var x = scalar2ndarray( 1.0 );
 * // returns <ndarray>[ 1.0 ]
@@ -33,12 +37,9 @@
 * var out = ndarraylike2scalar( x );
 * // returns 1.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function ndarraylike2scalar<T = unknown>( x: typedndarray<T> ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = ndarraylike2scalar;
